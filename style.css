@@ -1,0 +1,184 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+#overlay{
+    position: fixed;
+    width: 70%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out,visibility 0s 0.3s;
+    visibility: hidden;
+
+    /* Is this really needed? */
+    z-index: 900;
+}
+#overlay.active{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease-in-out, visibility 0s 0s;
+}
+#overclose{
+    font-size: larger;
+    background-color: black;
+    color: #fff;
+    width: 12%;
+    height: 17vh;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    top: 210px;
+    right: -500px;
+    transition: right 0.5s ease;
+    visibility: hidden;
+
+}
+#overclose.active{
+    visibility: visible;
+    right: 40%;
+}
+
+nav{
+    padding: 20px;
+    display: flex;
+    justify-content: end;
+}
+nav a{
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    
+    
+}
+.nav-bar:hover{
+    background-color: black;
+    color: aliceblue;
+    transition:0.5s;
+    
+}
+.logo{
+    margin-right:auto ;
+}
+.container{
+    display: flex;
+    width: 100%;
+    height: 82.5vh;
+    /* border: solid; */
+}
+.lefty{
+    width: 65%;
+    /* border: solid; */
+    padding: 20px;
+}
+.lefty h1{
+    font-size: 70px;
+}
+.lefty p{
+    font-size: 25px;
+}
+.righty{
+    width: 35%;
+    height: 82.5vh;
+    /* border: solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.righty a{
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: none;
+    color: black;
+
+}
+.heading-box{
+    padding: 10px 20px;
+}
+.heading-box a{
+    color: lightgray;
+}
+.mini-box{
+    border:rgb(241, 239, 239) solid;
+    border-width: 0 0 2px 0;
+    margin: 0 20px;
+    padding:  10px 0;
+    transition: 0.5s;
+    
+}
+.mini-box:hover{
+    transition: 0.5s;
+    border:gray solid;
+    border-width: 0 0 2px 0;
+
+    /* Just Added */
+    /* transform: scaleX(1); */
+}
+
+/* .mini-box::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: gray; /* Color of the animated border 
+    transition: width 0.5s ease; /* Smooth transition 
+}
+
+.mini-box:hover::before {
+    width: 100%; /* Expand the border from left to right on hover 
+} */
+
+#AboutSection{
+    position: fixed;
+    width: 500px;
+    height: 90%;
+    background-color: #fff;
+    top: 0;
+    right: -600px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.5s ease-in-out;
+    padding: 40px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* Is this really needed? */
+    z-index: 1000;
+}
+#AboutSection p{
+    color: gray;
+    font-size: 21px;
+}
+#AboutSection h1{
+    font-size: 25px;
+    font-weight: 100;
+    margin: 50px 0;
+}
+#AboutSection h2{
+    margin: 40px 0;
+    font-weight: 100;
+    font-size: 30px;
+}
+#WorkSection{
+    position: fixed;
+    width: 500px;
+    height: 90%;
+    background-color: #fff;
+    top: 0;
+    right: -600px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.5s ease;
+    padding: 40px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    /* I this really needed? */
+    z-index: 1000;
+}
+#AboutSection.active{
+    right: 0;
+}
+#WorkSection.active{
+    right: 0;
+}
